@@ -4,6 +4,8 @@ const { fetchTweets } = require('./backend');
 
 const app = express();
 const port = 3000;
+const cors = require('cors');
+app.use(cors());
 
 // Route to fetch tweets and embedded videos
 app.get('/tweets', async (req, res) => {
